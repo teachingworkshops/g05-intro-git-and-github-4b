@@ -1,2 +1,2 @@
-# g05-intro-git-and-github-4b
-g05-intro-git-and-github-4b created by GitHub Classroom
+# Group 04B
+Text Based project with a focus on math to advance

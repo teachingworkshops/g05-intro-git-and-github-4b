@@ -14,6 +14,12 @@ pip install -r requirements.txt
 python derivative_dungeon.py
 ```
 
+## Running tests
+
+```sh
+pytest
+```
+
 ## License
 
 MIT

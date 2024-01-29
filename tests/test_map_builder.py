@@ -5,7 +5,7 @@ MapBuilder class test
 """
 import pytest
 from map_builder import MapBuilder
-from Room import Room
+from room import Room
 
 # Fixture for creating an instance of the MapBuilder class
 @pytest.fixture

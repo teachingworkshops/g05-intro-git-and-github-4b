@@ -41,3 +41,16 @@ class Assets:
 
     WATTSON_HALL_NAME = 'Wattson Hall'
     WATTSON_HALL_DESC = 'Wattson Hall Desc'                 
+
+    #INTRO
+    INTRO_MSG = r"""
+    You wake up in an empty room of what seems to be a dungeon with a note that says:
+
+    'Hello, this is Professor Gyllinsky. Welcome to the ACTUAL final project for our class.
+    Remember when you told me that you didn't need math to be a good developer?
+    If you want to escape this monster-filled dungeon, YOU will need your math skills. Good luck!'
+
+    As confused as you are that a software engineering professor would go through this length of events
+    just so you can prove your math skills, you see a door directly infront of you. 
+    What will you do?
+    """

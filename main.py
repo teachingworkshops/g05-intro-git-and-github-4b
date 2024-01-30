@@ -33,7 +33,7 @@ class Main:
         
     def move_user(self, response):
         self.current_level = self.current_level.connected_rooms[response]
-        print(f"Good Job, you have successfully moved to {self.current_level._name}!")
+        print(f"You have successfully moved to {self.current_level._name}!")
         print(self.current_level.description)
         print()
         

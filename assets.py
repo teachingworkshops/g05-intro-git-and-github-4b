@@ -63,7 +63,17 @@ class Assets:
         |  |  | -_|  _| | | | .'|  _| | | | -_|  |  |  | | |   | . | -_| . |   |
         |____/|___|_| |_|\_/|__,|_| |_|\_/|___|  |____/|___|_|_|_  |___|___|_|_|
                                                                |___| 
-            """
+            """            
+
+    #CREDITS
+    CREDITS = r"""
+    
+    
+    """
+    
+    #DEATH MESSAGES (make this a list of different death messages and return a random one when called method)
+    def death_message():
+        return "dead"
 
     class ENEMY_ID(Enum):
         SKELETON = 1

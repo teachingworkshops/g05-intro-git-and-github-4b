@@ -54,3 +54,11 @@ class Assets:
     just so you can prove your math skills, you see a door directly infront of you. 
     What will you do?
     """
+    #GAME NAME
+    GAME_NAME = r"""                                            
+         ____          _         _   _            ____                          
+        |    \ ___ ___|_|_ _ ___| |_|_|_ _ ___   |    \ _ _ ___ ___ ___ ___ ___ 
+        |  |  | -_|  _| | | | .'|  _| | | | -_|  |  |  | | |   | . | -_| . |   |
+        |____/|___|_| |_|\_/|__,|_| |_|\_/|___|  |____/|___|_|_|_  |___|___|_|_|
+                                                               |___| 
+            """

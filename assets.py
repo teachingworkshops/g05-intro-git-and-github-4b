@@ -15,14 +15,14 @@ class Assets:
     IRA_ALLEN_NAME = 'Ira Allen'
     IRA_ALLEN_DESC = 'Ira Allen Desc'
 
-    TAMSEY_GYM_NAME = 'Tamsey Gym'
-    TAMSEY_GYM_DESC = 'Tamsey Gym Desc'
+    TANSEY_GYM_NAME = 'Tansey Gym'
+    TANSEY_GYM_DESC = 'Tansey Gym Desc'
 
     BEATTY_NAME = 'Beatty'
     BEATTY_DESC = 'Beatty Desc'
 
-    QUAD_NAME = 'Quad'
-    QUAD_DESC = 'Quad Desc'
+    THE_QUAD_NAME = 'Quad'
+    THE_QUAD_DESC = 'Quad Desc'
 
     WILLSON_HALL_NAME = 'Willson Hall'
     WILLSON_HALL_DESC = 'Willson Hall Desc'

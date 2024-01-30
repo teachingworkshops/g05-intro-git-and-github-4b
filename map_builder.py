@@ -9,9 +9,9 @@ def build_level():
    annex_central = Room(Assets.ANNEX_CENTRAL_NAME, Assets.ANNEX_CENTRAL_DESC)
    annex_north = Room(Assets.ANNEX_NORTH_NAME, Assets.ANNEX_NORTH_DESC)
    ira_allen = Room(Assets.IRA_ALLEN_NAME, Assets.IRA_ALLEN_DESC)
-   tamsey_gym = Room(Assets.TAMSEY_GYM_NAME, Assets.TAMSEY_GYM_DESC)
+   tansey_gym = Room(Assets.TANSEY_GYM_NAME, Assets.TANSEY_GYM_DESC)
    beatty = Room(Assets.BEATTY_NAME, Assets.BEATTY_DESC)
-   quad = Room(Assets.QUAD_NAME, Assets.QUAD_DESC)
+   the_quad = Room(Assets.THE_QUAD_NAME, Assets.THE_QUAD_DESC)
    willson_hall = Room(Assets.WILLSON_HALL_NAME, Assets.WILLSON_HALL_DESC)
    kingsman_hall = Room(Assets.KINGSMAN_HALL_NAME, Assets.KINGSMAN_HALL_DESC)
    rubenstein_hall = Room(Assets.RUBENSTEIN_HALL_NAME, Assets.RUBENSTEIN_HALL_DESC)
@@ -23,11 +23,11 @@ def build_level():
    ira_allen.set_has_key(True)
 
    # Connects all rooms
-   RoomGraphBuilder.path([annex_east, annex_south, tamsey_gym, beatty, quad])
+   RoomGraphBuilder.path([annex_east, annex_south, tansey_gym, beatty, the_quad])
    RoomGraphBuilder.path([annex_south, annex_central, annex_north, ira_allen])
-   RoomGraphBuilder.cycle([quad, willson_hall, kingsman_hall, rubenstein_hall,
+   RoomGraphBuilder.cycle([the_quad, willson_hall, kingsman_hall, rubenstein_hall,
                        williston_hall, wentworth_hall, wattson_hall])
-   RoomGraphBuilder.star(quad, [willson_hall, kingsman_hall, rubenstein_hall,
+   RoomGraphBuilder.star(the_quad, [willson_hall, kingsman_hall, rubenstein_hall,
                        williston_hall, wentworth_hall, wattson_hall])   
 
    # Returns starting Room

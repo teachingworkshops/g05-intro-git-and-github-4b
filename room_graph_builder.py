@@ -1,9 +1,10 @@
-class MapBuilder:
+class RoomGraphBuilder:
     """
-    Builder used to build maps based on rooms
+    Builder used to build graphs based on rooms
     """
-    
-    def attach_rooms(self, room1, room2):
+
+    @staticmethod
+    def attach_rooms(room1, room2):
         """
         Attaches two rooms to each other
         Checks if rooms not attached to that rooms yet
@@ -18,7 +19,8 @@ class MapBuilder:
         if room1.name not in room2.connected_rooms:            
             room2.connected_rooms[room1.name] = room1
 
-    def cycle(self, room_list):
+    @staticmethod
+    def cycle(room_list):
         """
         creates a cycle graph out of the rooms list
 
@@ -26,10 +28,11 @@ class MapBuilder:
             room_list (list): list of rooms
 
         """
-        self.path(room_list)
-        self.attach_rooms(room_list[0], room_list[-1])
+        RoomGraphBuilder.path(room_list)
+        RoomGraphBuilder.attach_rooms(room_list[0], room_list[-1])
 
-    def path(self, rooms_list):
+    @staticmethod
+    def path(rooms_list):
         """
         creates a path graph out of rooms list in order
 
@@ -39,9 +42,10 @@ class MapBuilder:
         """
         list_len = len(rooms_list)  
         for idx in range(list_len-1):
-            self.attach_rooms(rooms_list[idx], rooms_list[idx+1])
+            RoomGraphBuilder.attach_rooms(rooms_list[idx], rooms_list[idx+1])
 
-    def star(self, central_room, room_list):
+    @staticmethod
+    def star(central_room, room_list):
         """
         creates a star graph using the central room 
         and a list of rooms to attach it to
@@ -51,4 +55,4 @@ class MapBuilder:
             room_list (list): list of rooms to attach to central room
         """
         for current_room in room_list:
-            self.attach_rooms(central_room, current_room)    
+            RoomGraphBuilder.attach_rooms(central_room, current_room)    

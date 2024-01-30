@@ -1,16 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 @author: Brian Morillo
-MapBuilder class test
+RoomGraphBuilder class test
 """
 import pytest
-from map_builder import MapBuilder
+from room_graph_builder import RoomGraphBuilder
 from room import Room
-
-# Fixture for creating an instance of the MapBuilder class
-@pytest.fixture
-def map_builder_instance():
-    return MapBuilder()
 
 # Fixture for sample rooms
 @pytest.fixture
@@ -19,11 +14,11 @@ def sample_rooms():
     room_desc = "Room Desc"
     return [Room(name, room_desc) for name in room_names]
 
-# Test case for map builder attach rooms method
-def test_map_builder_attach_rooms(map_builder_instance, sample_rooms):
+# Test case for room graph builder attach rooms method
+def test_room_graph_builder_attach_rooms(sample_rooms):
     room1, room2 = sample_rooms[:2]
 
-    map_builder_instance.attach_rooms(room1, room2)   
+    RoomGraphBuilder.attach_rooms(room1, room2)   
 
     # Checks if room2 is correctly attached to room1
     assert room1.name not in room1.connected_names
@@ -42,11 +37,11 @@ def test_map_builder_attach_rooms(map_builder_instance, sample_rooms):
     assert room2 not in room_2_list    
 
 
-# Test case for checking a room path graph through the map builder
-def test_map_builder_path_creation(map_builder_instance, sample_rooms):
+# Test case for checking a room path graph through the RoomGraphBuilder
+def test_room_graph_builder_path_creation(sample_rooms):
     room1, room2, room3 = sample_rooms[:3]
 
-    map_builder_instance.path([room1, room2, room3])
+    RoomGraphBuilder.path([room1, room2, room3])
 
     # Checks if room1 is correctly attached to room2
     assert room1.name not in room1.connected_names
@@ -78,11 +73,11 @@ def test_map_builder_path_creation(map_builder_instance, sample_rooms):
     assert room2 in room_3_list
     assert room3 not in room_3_list       
 
-# Test case for checking a room cycle graph through the the map builder
-def test_map_builder_cycle_creation(map_builder_instance, sample_rooms):
+# Test case for checking a room cycle graph through the RoomGraphBuilder
+def test_room_graph_builder_cycle_creation(sample_rooms):
     room1, room2, room3 = sample_rooms[:3]
 
-    map_builder_instance.cycle([room1, room2, room3])
+    RoomGraphBuilder.cycle([room1, room2, room3])
 
     # Checks if rooms where correctly attached to room1
     assert room1.name not in room1.connected_names
@@ -111,11 +106,11 @@ def test_map_builder_cycle_creation(map_builder_instance, sample_rooms):
     assert room1 in room_3_list
     assert room2 in room_3_list      
 
-# Test case for checking a room star graph through the the map builder
-def test_map_builder_star_creation(map_builder_instance, sample_rooms):
+# Test case for checking a room star graph through the RoomGraphBuilder
+def test_room_graph_builder_star_creation(sample_rooms):
     room1, room2, room3 = sample_rooms[:3]
 
-    map_builder_instance.star(room2, [room1, room3])
+    RoomGraphBuilder.star(room2, [room1, room3])
 
     # Checks if room1 is correctly attached to room2
     assert room1.name not in room1.connected_names

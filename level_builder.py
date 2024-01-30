@@ -1,4 +1,4 @@
-from map_builder import MapBuilder
+from room_graph_builder import RoomGraphBuilder
 from room import Room
 from assets import Assets
 
@@ -22,12 +22,12 @@ def build_level():
    wentworth_hall.set_exit(True)
    ira_allen.set_has_key(True)
 
-   map_builder = MapBuilder()
-   map_builder.path([annex_east, annex_south, tamsey_gym, beatty, quad])
-   map_builder.path([annex_south, annex_central, annex_north, ira_allen])
-   map_builder.cycle([quad, willson_hall, kingsman_hall, rubenstein_hall,
+   # Connects all rooms
+   RoomGraphBuilder.path([annex_east, annex_south, tamsey_gym, beatty, quad])
+   RoomGraphBuilder.path([annex_south, annex_central, annex_north, ira_allen])
+   RoomGraphBuilder.cycle([quad, willson_hall, kingsman_hall, rubenstein_hall,
                        williston_hall, wentworth_hall, wattson_hall])
-   map_builder.star(quad, [willson_hall, kingsman_hall, rubenstein_hall,
+   RoomGraphBuilder.star(quad, [willson_hall, kingsman_hall, rubenstein_hall,
                        williston_hall, wentworth_hall, wattson_hall])   
 
    # Returns starting Room

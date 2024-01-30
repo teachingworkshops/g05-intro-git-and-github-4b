@@ -27,10 +27,10 @@ class Main:
 
         while response not in self.current_level.connected_rooms:
             print("\nNot quite. Please enter a valid connected room name.")
-            print(f"You can only travel to...")
+            print(f"Remember, you can only travel to...")
             for connected_name in self.current_level.connected_names:
                 print("\t" + connected_name)
-            response = input("choose wisely: ")
+            response = input("Choose wisely: ")
         self.move_user(response)
 
     def move_user(self, response):
@@ -39,7 +39,17 @@ class Main:
         print(self.current_level.description)
         print()
         if not self.current_level.is_cleared:
-            math_prompt(difficulty_counter)
+            print("g")
+
+    def math_prompt(self, difficulty_counter):
+        print(
+            f"You have approach a {Enemy.enemy_type}. The {Enemy.enemy_type} has {Enemy.action}"
+        )
+
+    def check_has_key(self):
+        if self.current_level.has_key:
+            print("Congrats you got the key\n")
+            self.has_key = True
 
     def check_game_over(self):
         if self.has_key and self.current_level.is_exit:  # fix this (check boss first)
@@ -51,20 +61,12 @@ class Main:
             else:
                 self.game_over = True
 
-    def check_has_key(self):
-        if self.current_level.has_key:
-            print("Congrats you got the key\n")
-            self.has_key = True
-
     def restart_game(self):
         game = Main()
         game.play_game()
 
-    def math_prompt(self, difficulty_counter):
-        # call math fuction which returns the key value pair
-        response = difficulty_counter
-
-    # def credits():
+    def credits():
+        print(Assets.CREDITS)
 
     def play_game(self):
         self.intro()
@@ -73,6 +75,16 @@ class Main:
             self.check_has_key()
             self.check_game_over()
             # boss and math problems
+
+    def create_test_enemy(self):
+        # Instantiate a test enemy
+        test_enemy = Enemy(
+            enemy_type="Test Enemy",
+            art="ASCII art goes here",
+            action="Action message goes here",
+            math_problem="Math problem goes here",
+        )
+        return test_enemy
 
 
 if __name__ == "__main__":

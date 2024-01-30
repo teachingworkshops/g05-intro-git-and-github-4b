@@ -39,17 +39,21 @@ class Main:
         print(self.current_level.description)
         print()
         if not self.current_level.is_cleared:
-           print('g')
+            print("g")
 
     def math_prompt(self, difficulty_counter):
-            print(f"You have approach a {Enemy.enemy_type}. The {Enemy.enemy_type} has {Enemy.action}")
-            #Get math problem
-            #placeholders:
-            math_prob = "3 + 3"
-            ans = 6
-            print(f"The {Enemy.enemy_type} has a question for you... What is the answer for this problem? \t{math_prob}")
-            if not input() == ans:
-                self.death()
+        print(
+            f"You have approach a {Enemy.enemy_type}. The {Enemy.enemy_type} has {Enemy.action}"
+        )
+        # Get math problem
+        # placeholders:
+        math_prob = "3 + 3"
+        ans = 6
+        print(
+            f"The {Enemy.enemy_type} has a question for you... What is the answer for this problem? \t{math_prob}"
+        )
+        if not input() == ans:
+            self.death()
 
     def check_has_key(self):
         if self.current_level.has_key:
@@ -69,17 +73,17 @@ class Main:
                 self.game_over = True
 
     def death(self):
-        print("That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y or N: ")
-        if input() == 'y':
+        print(
+            "That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y or N: "
+        )
+        if input() == "y":
             self.restart_game()
         else:
             self.game_over = True
-        
-    
+
     def credits():
-            print(Assets.CREDITS)
-            
-            
+        print(Assets.CREDITS)
+
     def restart_game(self):
         game = Main()
         game.play_game()
@@ -91,16 +95,17 @@ class Main:
             self.check_has_key()
             self.check_game_over()
             # boss and math problems
-            
+
     def create_test_enemy(self):
-            # Instantiate a test enemy
-            test_enemy = Enemy(
-                enemy_type="Test Enemy",
-                art="ASCII art goes here",
-                action="Action message goes here",
-                math_problem="Math problem goes here"
-            )
-            return test_enemy
+        # Instantiate a test enemy
+        test_enemy = Enemy(
+            enemy_type="Test Enemy",
+            art="ASCII art goes here",
+            action="Action message goes here",
+            math_problem="Math problem goes here",
+        )
+        return test_enemy
+
 
 if __name__ == "__main__":
 

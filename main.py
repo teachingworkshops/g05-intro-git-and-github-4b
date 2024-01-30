@@ -1,6 +1,6 @@
 from enemy import Enemy
 from assets import Assets
-from level_builder import build_level
+from map_builder import build_level
 
 
 class Main:

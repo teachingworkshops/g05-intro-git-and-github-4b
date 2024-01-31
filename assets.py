@@ -348,3 +348,44 @@ r"""
         "pretending to be a mime stuck in an invisible box",    
 ]
 
+## MATH QUESTIONS
+
+easy_questions = [
+        ("1 + 9", "10"),
+        ("5 – 2", "3"),
+        ("18 / 3", "6"),
+        ("9 * 10", "90"),
+        ("4 ** 3", "64")
+    ]
+
+medium_questions = [
+        ("Simplify 924/1092", "11/13"),
+        ("6x + y = 25, 2x – 3y = 25", "5"),
+        ("3(2y + 4) = 8y", "6"),
+        ("Carol is three times older than Andrew. Brad is two years older than Andrew. In six years, the sum of Andrew’s and Brad’s ages will be the same as Carol’s age. How old is Carol?", "24"),
+        ("13 – 2(2x + 1) = 1", "5/2")
+        ("f(x) is a function such that f(x) + 3 f(8 – x) = x for all real numbers x. Find the value of f(2).", "2")
+        ("A car travels from A to B at an average speed of 50 km/hour. At what average speed would it have to travel from B to A, averaging 60 km/hour for the whole trip?", "75")
+        ("Solve for x. 3x – 2y = 0, 3x + y = 9", "2")
+        ("Find the distance between (-4, -3) and (4, 3).", "10")
+        ("Solve for x. x / 5 + (x – 1) / 3 = 1/5", "1")
+    ]
+
+hard_questions = [
+        ("What’s the derivative: h(y) = y**-4 – 9y**-3 + 8y**-2 + 12", "-4y**-5+27y**-4–16y**-3 ")
+        ("Find the derivative: (y**5 – 5y**3 + 2y)/(y**3)", "2y–4y**-3")
+        ("Find the derivative: z = 3x**3 -9x", "9x**2–9")
+        ("Find the derivative: g(z) = 4z**2 – 3z**-7 + 9z", "28z**6+21z**-8+9")
+        ("Find the tangent line to g(x) = 16/x – 4(x)**1/2 at x = 4.", "y=-2x+4")
+        ("Find the integral: 4x**6 – 2x**3 + 7x – 4.", "4/7x**7–(1/2)x**4+7/2x**2–4x+c")
+        ("Find the integral: 2cos(w) – sec(w)tan(w).", "2sin(w)–sec(w)+c")
+        ("Find the integral: 4sin(x/3).", "-12cos(x/3)+c")
+        ("Find the integral: (x+4)**(8/7) (x-3)**(6/7).", "[(x-3)]/(x+4)]**(1/7)")
+        ("Find the integral: cos(loge x)", "(x/2)[cos(logex)+sin(loge x)]+c")
+        ("The position of a particle is given by x(t) = t**3/3 – 4t**2 + 12t. In which time interval(s) does the particle have a positive velocity?", "[0,2) (6, infinity)")
+        ("Suppose a plane is traveling at a distance of s = f(t) which is a function of time, t, as given by s = f(t) = 8t**2 – 4t + 23. What is the planes acceleration?", "16")
+        ("Suppose that the number of people infected with the flu in a certain city is given by f(t) = 0.5e**t + t**2 in hundreds, with being the time in days since flu season began. How many times higher is the rate of spread of the flu on day 6 than day 2? (Round to nearest whole number)", "28")
+        ("Find the third derivative: x**5 + 2x**3 – x + 4", "60x**2+12")
+        ("Find the derivative: (3x-4)/(2x**2 – 1).", "(-6x**2+16x–3)/(2x**2–1)**2")
+    ]
+

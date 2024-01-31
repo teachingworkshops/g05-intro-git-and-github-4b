@@ -1,4 +1,5 @@
 from enemy import Enemy
+from enemy_builder import build_random_enemy
 from assets import Assets
 from map_builder import build_level
 
@@ -107,11 +108,5 @@ class Main:
 
 
 if __name__ == "__main__":
-    test_enemy = Enemy(
-        enemy_type="Test Enemy",
-        art=":)",
-        action="spit in your food",
-        math_problem="3 + 3",
-    )
     game = Main()
     game.play_game()

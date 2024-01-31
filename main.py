@@ -1,5 +1,5 @@
 from enemy import Enemy
-from enemy_builder import build_random_enemy
+from enemy_builder import EnemyBuilder
 from assets import Assets
 from map_builder import build_level
 
@@ -11,6 +11,7 @@ class Main:
         self.has_key = False
         self.game_over = False
         self.difficulty_counter = 0
+        self.enemy_builder = EnemyBuilder()
 
     def intro(self):
         print(Assets.GAME_NAME)
@@ -44,25 +45,22 @@ class Main:
             f"\nYou have successfully moved to {self.current_level._name}!\n{self.current_level.description}\n"
         )
 
-    def math_prompt(self):  # also pass difficulty_counter
-       # ideally the enemy art will have a space before and a space after 
+    def math_prompt(self):
+        enemy = self.enemy_builder.build_random_enemy(self.difficulty_counter)
+        # ideally the enemy art will have a space before and a space after
         print(
-            f"\n{test_enemy.art}\n\nYou have approach a {test_enemy.enemy_type}. The {test_enemy.enemy_type} has {test_enemy.action}!"
+            f"\n{enemy.art}\n\nYou have approach a {enemy.enemy_type}. The {enemy.enemy_type} is {enemy.action}!"
         )
         # Get math problem
         # combine the print statements later or figure out something better
         print(
-            f"The {test_enemy.enemy_type} has a question for you...\nWhat is the answer for this problem? \t{test_enemy.math_problem}"
+            f"The {enemy.enemy_type} has a question for you...\nWhat is the answer for this problem? \t{enemy.math_problem}"
         )
 
-        # placeholder
-        ans = 6
-
+        ans = 5
         # will all the answers be numbers? will some have variables? how can we handle that.. check diff counter, 0 should have answers all int. need the questions class to work on this.
         if not int(input()) == ans:
             self.death()
-
-        # figure out the scaling for diff counter. how will we know when to increase the counter?
         self.current_level._is_cleared = True
 
     def check_has_key(self):
@@ -83,7 +81,6 @@ class Main:
                 self.game_over = True
 
     def death(self):
-        # replace print with print(death_message from assets class)
         print(
             "That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y or N: "
         )

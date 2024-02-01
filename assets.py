@@ -9,13 +9,13 @@ class Assets:
     ANNEX_SOUTH_DESC = 'Annex South Desc'
 
     ANNEX_CENTRAL_NAME = 'Annex Central'
-    ANNEX_CENTRAL_DESC = 'There is no elevator here? And your class is on the top floor? I hope you brought some trail mix for that hike.'
+    ANNEX_CENTRAL_DESC = 'Annex Central Desc'
 
     ANNEX_NORTH_NAME = 'Annex North'
     ANNEX_NORTH_DESC = 'Annex North Desc'
 
     IRA_ALLEN_NAME = 'Ira Allen'
-    IRA_ALLEN_DESC = 'This place really puts the \'science\' in \'science and technology\'. The lab tables were really fun to scratch- uh, study on.'
+    IRA_ALLEN_DESC = 'Ira Allen Desc'
 
     TANSEY_GYM_NAME = 'Tansey Gym'
     TANSEY_GYM_DESC = 'A large gymnasium. Although you were the worst at basketball, no one is going to judge you here.'
@@ -27,7 +27,7 @@ class Assets:
     THE_QUAD_DESC = 'A large square of grass. This place connects all other buildings in the vicinity.'
 
     WILLSON_HALL_NAME = 'Willson Hall'
-    WILLSON_HALL_DESC = 'Very spacious rooms compared to the other building\'s rooms.'
+    WILLSON_HALL_DESC = 'Willson Hall Desc'
 
     KINGSMAN_HALL_NAME = 'Kingman Hall'
     KINGSMAN_HALL_DESC = 'A long hallway connecting Willson and Rubenstein. A bunch of big fancy machines fill each room'
@@ -36,13 +36,13 @@ class Assets:
     RUBENSTEIN_HALL_DESC = 'There are a few vending machines here, you could stop and snack for a bit. Wait... $3.75 for a 4 ounce bag of jerky... daylight robbery.'
 
     WILLISTON_HALL_NAME = 'Williston Hall'
-    WILLISTON_HALL_DESC = 'Sometimes, it feels like a sauna, other times... well, actually it always feels like a sauna... for better or for worse.'
+    WILLISTON_HALL_DESC = 'Williston Hall Desc'
 
     WENTWORTH_HALL_NAME = 'Wentworth Hall'
-    WENTWORTH_HALL_DESC = 'Some of these desks do not look very comfortable to sit in. There is no way it can fit a laptop and a notebook at the same time. At least the technology hallway is pretty.'
+    WENTWORTH_HALL_DESC = 'Wentworth Hall Desc'
 
     WATTSON_HALL_NAME = 'Watson Hall'
-    WATTSON_HALL_DESC = 'A really big auditorium brings back old memories. You were here on day 1, now you are back again, how nostalgic.'
+    WATTSON_HALL_DESC = 'Watson Hall Desc'
     
     CEIS_NAME = 'CEIS'
     CEIS_DESC = 'Everything looks new and better compared to the other buildings. The exterior is made of glass, so maybe put down the rock before someone turns you into a saying.'
@@ -55,7 +55,7 @@ class Assets:
         ("18 / 3", "6"),
         ("9 * 10", "90"),
         ("4 ** 3", "64"),
-        ("4 ^ (1/2)", "2"),
+        ("4 ** (1/2)", "2"),
         ("5 + 9", "14"),
         ("-4 + 10", "6"),
         ("8 * -3", "-24"),
@@ -66,11 +66,13 @@ class Assets:
         ("10 * 10", "100"),
         ("89 - 17", "72"),
         ("109 + 11", "120"),
-        ("18 * 2", "36")
+        ("18 * 2", "36"),
+        ("42 + 0", "42"),
+        ("86 * 1", "86"),
+        ("9815 * 0", "0")
     ]
 
     medium_questions = [
-        ("Simplify 924/1092", "11/13"),
         ("6x + y = 25, 2x – 3y = 25", "5"),
         ("3(2y + 4) = 8y", "6"),
         ("Carol is three times older than Andrew. Brad is two years older than Andrew. In six years, the sum of Andrew’s and Brad’s ages will be the same as Carol’s age. How old is Carol?", "24"),
@@ -79,7 +81,13 @@ class Assets:
         ("A car travels from A to B at an average speed of 50 km/hour. At what average speed would it have to travel from B to A, averaging 60 km/hour for the whole trip?", "75"),
         ("Solve for x. 3x – 2y = 0, 3x + y = 9", "2"),
         ("Find the distance between (-4, -3) and (4, 3).", "10"),
-        ("Solve for x. x / 5 + (x – 1) / 3 = 1/5", "1")
+        ("Solve for x. x / 5 + (x – 1) / 3 = 1/5", "1"),
+        ("If 6x = 42 and xk = 2, qhat is the value of k?", "2/7"),
+        ("If 4x + 5 = 13x + 4 - x - 9, then what is x?", "5/4"),
+        ("If a**2 - b**2 = 8 and a*b = 2, find a**4 + b**4.", "72"),
+        ("Enter solutions from least to greatest. Formatted: (x1,x2) Least to greatest.", "(4,0.2)"),
+        ("Complete the square by adding a number to both sides: x**2 - 8x + 3 = 0.", "16"),
+        ("What is the x intercept of the line -3x + y = 3?", "(-1,0)")
     ]
 
     hard_questions = [
@@ -95,9 +103,20 @@ class Assets:
         ("Find the integral: cos(loge x)", "(x/2)[cos(logex)+sin(loge x)]+c"),
         ("The position of a particle is given by x(t) = t**3/3 – 4t**2 + 12t. In which time interval(s) does the particle have a positive velocity?", "[0,2) (6, infinity)"),
         ("Suppose a plane is traveling at a distance of s = f(t) which is a function of time, t, as given by s = f(t) = 8t**2 – 4t + 23. What is the planes acceleration?", "16"),
-        ("Suppose that the number of people infected with the flu in a certain city is given by f(t) = 0.5e**t + t**2 in hundreds, with being the time in days since flu season began. How many times higher is the rate of spread of the flu on day 6 than day 2? (Round to nearest whole number)", "28"),
         ("Find the third derivative: x**5 + 2x**3 – x + 4", "60x**2+12"),
-        ("Find the derivative: (3x-4)/(2x**2 – 1).", "(-6x**2+16x–3)/(2x**2–1)**2")
+        ("Find the derivative: (3x-4)/(2x**2 – 1).", "(-6x**2+16x–3)/(2x**2–1)**2"),
+        ("Find the derivative: y = 2t**4 - 10t**2 + 13t", "8t**3-20t+13"),
+        ("Find the derivative: y = x(3x**2 - 9)", "9x**2-9"),
+        ("Find the derivative: x = (y - 4)(2y + y**2)", "3y**2-4y-8"),
+        ("Find the integral: sin(x) + 10csc**2(x)", "-cos(x)-10cot(x)+c"),
+        ("Determine f(x) given that f'(x) = 12x**2 - 4x and f(-3) = 17.", "4x**3-2x**2+143"),
+        ("Find the integral: w**-2 + 10w**-5 - 8w.", "-w**-1-(5/2)w**-4-8w+c")
+    ]
+
+    boss_questions = [
+        ("Suppose that the number of people infected with the flu in a certain city is given by f(t) = 0.5e**t + t**2 in hundreds, with being the time in days since flu season began. How many times higher is the rate of spread of the flu on day 6 than day 2? (Round to nearest whole number)", "28"),
+        ("Determine where the tangent line to f(x) = x**3 - 5x**2 + x is parallel to the line y = 4x + 23. Round to nearest hundredth.", "3.61"),
+        ("What's the local iminimum of f(x) = (2/3)x**3 + 7x**2 - 12x when -10 <= x <= 10. Round to the nearest hundredth.", "0.77")
     ]
     
     #INTRO
@@ -131,7 +150,7 @@ class Assets:
     
     #DEATH MESSAGES (make this a list of different death messages and return a random one when called method)
     def death_message():
-        return "A bolt of lightning strikes you. In your final moments a few words were uttered in your ear: \'You should have studied\'\n--GAME OVER--"
+        return "dead"
 
     class ENEMY_ID(Enum):
         SKELETON = 1

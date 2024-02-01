@@ -18,6 +18,7 @@ def build_level():
    williston_hall = Room(Assets.WILLISTON_HALL_NAME, Assets.WILLISTON_HALL_DESC)
    wentworth_hall = Room(Assets.WENTWORTH_HALL_NAME, Assets.WENTWORTH_HALL_DESC)
    wattson_hall = Room(Assets.WATTSON_HALL_NAME, Assets.WATTSON_HALL_DESC)
+   ceis_building = Room(Assets.CEIS_NAME, Assets.CEIS_DESC)
 
    wentworth_hall.set_exit(True)
    ira_allen.set_has_key(True)
@@ -29,6 +30,7 @@ def build_level():
                        williston_hall, wentworth_hall, wattson_hall])
    RoomGraphBuilder.star(the_quad, [willson_hall, kingsman_hall, rubenstein_hall,
                        williston_hall, wentworth_hall, wattson_hall])   
+   RoomGraphBuilder.path([the_quad, ceis_building])
 
    # Returns starting Room
    return annex_east

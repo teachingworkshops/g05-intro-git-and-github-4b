@@ -6,7 +6,7 @@ class MathQuestion:
         Gives out a math question
     """
     # Dictionary keeping track of the used questions for each difficulty
-    used_questions = {0: set(), 1: set(), 2: set()}
+    used_questions = {0: set(), 1: set(), 2: set(), 3: set()"}
 
     @staticmethod
     def generate_question(difficulty):
@@ -27,9 +27,9 @@ class MathQuestion:
         """
         
         # Checks for difficulty and chooses set accordingly
-        if difficulty >= 1 and difficulty <= 6:
+        if 1 <= difficulty <= 6:
             available_questions = set(Assets.easy_questions)
-        elif difficulty >= 7 and difficulty <= 12:
+        elif 7 <= difficulty <= 12:
             available_questions = set(Assets.medium_questions)
         elif difficulty >= 13:
             available_questions = set(Assets.hard_questions)

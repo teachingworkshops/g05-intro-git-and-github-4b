@@ -1,6 +1,6 @@
 from enemy import Enemy
 from assets import Assets
-from math_question import math_question
+from math_question import MathQuestion
 import random
 
 class EnemyBuilder:
@@ -21,8 +21,8 @@ class EnemyBuilder:
         e_type = Assets.ENEMY_TYPES[enemy_id]
         art = Assets.ENEMY_ART[enemy_id]
         action =  random.choice(Assets.ENEMY_ACTIONS)
-        math_question = math_question.generate_question(difficulty)
-        
+        math_question = MathQuestion.generate_question(difficulty)
+
         return Enemy(e_type, art, action, math_question)
 
 

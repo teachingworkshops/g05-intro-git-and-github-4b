@@ -47,6 +47,7 @@ class Assets:
     CEIS_NAME = 'CEIS'
     CEIS_DESC = 'Everything looks new and better compared to the other buildings. The exterior is made of glass, so maybe put down the rock before someone turns you into a saying.'
 
+    DELIMIT = "------------------------------------------------------"
     ## MATH QUESTIONS
 
     easy_questions = [

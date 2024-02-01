@@ -44,6 +44,7 @@ class derivative_dungeon:
         response = input(
             "Choose wisely and enter exactly as you see it: "
         )  # eventually we can ignore cases
+        print(Assets.DELIMIT)
         self.check_response(response)
 
     def check_response(self, response):
@@ -59,6 +60,7 @@ class derivative_dungeon:
             for connected_name in self.current_level.connected_names:
                 print("\t" + connected_name)
             response = input("Make sure you enter it exactly as you see: ")
+        
         self.move_user(response)
 
     def move_user(self, response):
@@ -96,6 +98,7 @@ class derivative_dungeon:
         if not input().strip() == answer:
             self.death()
         self.difficulty_counter += 1
+        print(Assets.DELIMIT)
         print("Nice job. Transporting now...")
         self.current_level._is_cleared = True
 

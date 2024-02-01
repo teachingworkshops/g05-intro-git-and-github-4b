@@ -16,6 +16,8 @@ class MathQuestion:
             available_questions = set(Assets.medium_questions)
         elif difficulty == 2:
             available_questions = set(Assets.hard_questions)
+        elif difficulty == 3:
+            available_questions = set(Assets.boss_questions)
 
         # Makes set with only unused questions
         unused_questions = available_questions - MathQuestion.used_questions[difficulty]

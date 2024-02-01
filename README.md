@@ -32,13 +32,15 @@ pyinstaller --onefile derivative_dungeon.py
 
 ## Credits
 
-https://github.com/kongshijatwit
-https://github.com/Nehummus
-https://github.com/briansanchez1
-https://github.com/morillobatwit
+- https://github.com/kongshijatwit
+- https://github.com/briansanchez1
+- https://github.com/morillobatwit
+- https://github.com/Nehummus
 
 ## Attributions
 
 The following resources were used for the project:
-https://fonts.google.com/noto/specimen/Noto+Color+Emoji
-https://manytools.org/hacker-tools/convert-images-to-ascii-art/
+
+- https://fonts.google.com/noto/specimen/Noto+Color+Emoji
+
+- https://manytools.org/hacker-tools/convert-images-to-ascii-art/

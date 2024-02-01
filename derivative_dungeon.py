@@ -83,7 +83,7 @@ class derivative_dungeon:
         """
         if self.current_level.is_exit:
             enemy = self.enemy_builder.build_boss()
-            self.difficulty_counter = 13
+            self.difficulty_counter = 10
         else:
             enemy = self.enemy_builder.build_random_enemy(self.difficulty_counter)
 
@@ -91,10 +91,9 @@ class derivative_dungeon:
         print(
             f"{enemy.art}\nYou have approached a {enemy.enemy_type}. The {enemy.enemy_type} is {enemy.action}! "
             + f"The {enemy.enemy_type} has a question for you...\nWhat is the answer for this problem? \t{question}"
-            + "\nIf you think your answer has a power (I'm not talking about magic), use double star (**): "
         )
 
-        if not input() == answer:
+        if not input().strip() == answer:
             self.death()
         self.difficulty_counter += 1
         print("Nice job. Transporting now...")
@@ -127,6 +126,7 @@ class derivative_dungeon:
                 self.restart_game()
             else:
                 self.game_over = True
+                exit()
 
     def death(self):
         """
@@ -140,6 +140,7 @@ class derivative_dungeon:
             self.restart_game()
         else:
             self.game_over = True
+            exit()
 
     def credits():
         """

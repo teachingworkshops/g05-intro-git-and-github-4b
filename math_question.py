@@ -2,30 +2,29 @@ import random
 from assets import Assets
 
 class math_question:
-    
+
+    # Dictionary keeping track of the used questions for each difficulty
+    used_questions = {0: set(), 1: set(), 2: set()}
+
     @staticmethod
     def generate_question(difficulty):
+
+        # Checks for difficulty and chooses set accordingly
         if difficulty == 0:
-            question, correct_answer = random.choice(Assets.easy_questions)
+            available_questions = set(Assets.easy_questions)
         elif difficulty == 1:
-            question, correct_answer = random.choice(Assets.medium_questions)
+            available_questions = set(Assets.medium_questions)
         elif difficulty == 2:
-            question, correct_answer = random.choice(Assets.hard_questions)
-        
+            available_questions = set(Assets.hard_questions)
+
+        # Makes set with only unused questions
+        unused_questions = available_questions - math_question.used_questions[difficulty]
+
+        # Chooses random question from unused questions list
+        question, correct_answer = random.choice(list(unused_questions))
+
+        # Marks questions as answered
+        math_question.used_questions[difficulty].add((question, correct_answer))
+
         return question, correct_answer
 
-"""
-TESTING
-
-difficulty = 1
-problem = math_question.generate_question(difficulty)
-
-print("Question:", problem[0])
-user_answer = input("Your answer: ")
-
-if user_answer == problem[1]:
-    print("Correct")
-else:
-    print("Incorrect. Correct answer:", problem[1])
-
-"""

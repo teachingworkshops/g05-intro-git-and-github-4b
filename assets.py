@@ -51,7 +51,20 @@ class Assets:
         ("5 – 2", "3"),
         ("18 / 3", "6"),
         ("9 * 10", "90"),
-        ("4 ** 3", "64")
+        ("4 ** 3", "64"),
+        ("4 ^ (1/2)", "2"),
+        ("5 + 9", "14"),
+        ("-4 + 10", "6"),
+        ("8 * -3", "-24"),
+        ("16 / 4", "4"),
+        ("7 ** 2", "49"),
+        ("1 + 1", "2"),
+        ("8 - 8", "0"),
+        ("10 * 10", "100"),
+        ("89 - 17", "72"),
+        ("109 + 11", "120"),
+        ("18 * 2", "36")
+        
     ]
 
     medium_questions = [
@@ -68,7 +81,7 @@ class Assets:
     ]
 
     hard_questions = [
-        ("What’s the derivative: h(y) = y**-4 – 9y**-3 + 8y**-2 + 12", "-4y**-5+27y**-4–16y**-3 "),
+        ("What’s the derivative: h(y) = y**-4 – 9y**-3 + 8y**-2 + 12", "-4y**-5+27y**-4–16y**-3"),
         ("Find the derivative: (y**5 – 5y**3 + 2y)/(y**3)", "2y–4y**-3"),
         ("Find the derivative: z = 3x**3 -9x", "9x**2–9"),
         ("Find the derivative: g(z) = 4z**2 – 3z**-7 + 9z", "28z**6+21z**-8+9"),
@@ -76,7 +89,7 @@ class Assets:
         ("Find the integral: 4x**6 – 2x**3 + 7x – 4.", "4/7x**7–(1/2)x**4+7/2x**2–4x+c"),
         ("Find the integral: 2cos(w) – sec(w)tan(w).", "2sin(w)–sec(w)+c"),
         ("Find the integral: 4sin(x/3).", "-12cos(x/3)+c"),
-        ("Find the integral: (x+4)**(8/7) (x-3)**(6/7).", "[(x-3)]/(x+4)]**(1/7)"),
+        ("Find the integral: (x+4)**(8/7) (x-3)**(6/7).", "[(x-3)]/(x+4)]**(1/7)+c"),
         ("Find the integral: cos(loge x)", "(x/2)[cos(logex)+sin(loge x)]+c"),
         ("The position of a particle is given by x(t) = t**3/3 – 4t**2 + 12t. In which time interval(s) does the particle have a positive velocity?", "[0,2) (6, infinity)"),
         ("Suppose a plane is traveling at a distance of s = f(t) which is a function of time, t, as given by s = f(t) = 8t**2 – 4t + 23. What is the planes acceleration?", "16"),

@@ -9,13 +9,13 @@ class Assets:
     ANNEX_SOUTH_DESC = 'Annex South Desc'
 
     ANNEX_CENTRAL_NAME = 'Annex Central'
-    ANNEX_CENTRAL_DESC = 'Annex Central Desc'
+    ANNEX_CENTRAL_DESC = 'There is no elevator here? And your class is on the top floor? I hope you brought some trail mix for that hike.'
 
     ANNEX_NORTH_NAME = 'Annex North'
     ANNEX_NORTH_DESC = 'Annex North Desc'
 
     IRA_ALLEN_NAME = 'Ira Allen'
-    IRA_ALLEN_DESC = 'Ira Allen Desc'
+    IRA_ALLEN_DESC = 'This place really puts the \'science\' in \'science and technology\'. The lab tables were really fun to scratch- uh, study on.'
 
     TANSEY_GYM_NAME = 'Tansey Gym'
     TANSEY_GYM_DESC = 'A large gymnasium. Although you were the worst at basketball, no one is going to judge you here.'
@@ -27,7 +27,7 @@ class Assets:
     THE_QUAD_DESC = 'A large square of grass. This place connects all other buildings in the vicinity.'
 
     WILLSON_HALL_NAME = 'Willson Hall'
-    WILLSON_HALL_DESC = 'Willson Hall Desc'
+    WILLSON_HALL_DESC = 'Very spacious rooms compared to the other building\'s rooms.'
 
     KINGSMAN_HALL_NAME = 'Kingman Hall'
     KINGSMAN_HALL_DESC = 'A long hallway connecting Willson and Rubenstein. A bunch of big fancy machines fill each room'
@@ -36,13 +36,13 @@ class Assets:
     RUBENSTEIN_HALL_DESC = 'There are a few vending machines here, you could stop and snack for a bit. Wait... $3.75 for a 4 ounce bag of jerky... daylight robbery.'
 
     WILLISTON_HALL_NAME = 'Williston Hall'
-    WILLISTON_HALL_DESC = 'Williston Hall Desc'
+    WILLISTON_HALL_DESC = 'Sometimes, it feels like a sauna, other times... well, actually it always feels like a sauna... for better or for worse.'
 
     WENTWORTH_HALL_NAME = 'Wentworth Hall'
-    WENTWORTH_HALL_DESC = 'Wentworth Hall Desc'
+    WENTWORTH_HALL_DESC = 'Some of these desks do not look very comfortable to sit in. There is no way it can fit a laptop and a notebook at the same time. At least the technology hallway is pretty.'
 
     WATTSON_HALL_NAME = 'Watson Hall'
-    WATTSON_HALL_DESC = 'Watson Hall Desc'
+    WATTSON_HALL_DESC = 'A really big auditorium brings back old memories. You were here on day 1, now you are back again, how nostalgic.'
     
     CEIS_NAME = 'CEIS'
     CEIS_DESC = 'Everything looks new and better compared to the other buildings. The exterior is made of glass, so maybe put down the rock before someone turns you into a saying.'
@@ -131,7 +131,7 @@ class Assets:
     
     #DEATH MESSAGES (make this a list of different death messages and return a random one when called method)
     def death_message():
-        return "dead"
+        return "A bolt of lightning strikes you. In your final moments a few words were uttered in your ear: \'You should have studied\'\n--GAME OVER--"
 
     class ENEMY_ID(Enum):
         SKELETON = 1

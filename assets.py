@@ -3,7 +3,7 @@ from enum import Enum
 class Assets:
     # ROOMS INFO
     ANNEX_EAST_NAME = 'Annex East'
-    ANNEX_EAST_DESC = 'This area kind of feels like the east of an annex building.'
+    ANNEX_EAST_DESC = 'This area kind of feels like the east of a certain Annex building.'
 
     ANNEX_SOUTH_NAME = 'Annex South'
     ANNEX_SOUTH_DESC = 'Halls! Halls! And more halls!'
@@ -39,7 +39,7 @@ class Assets:
     WILLISTON_HALL_DESC = 'Sometimes, it feels like a sauna, other times... well, actually it always feels like a sauna... for better or for worse.'
 
     WENTWORTH_HALL_NAME = 'Wentworth Hall'
-    WENTWORTH_HALL_DESC = 'Some of these desks do not look very comfortable to sit in. There is no way it can fit a laptop and a notebook at the same time. At least the technology hallway is pretty.'
+    WENTWORTH_HALL_DESC = 'Some of these desks do not look very comfortable to sit in. There is no way it can fit a laptop and a notebook at the same time. At least the technology hallway is pretty.\nThis is the exit, remember to have the key ready.'
 
     WATTSON_HALL_NAME = 'Watson Hall'
     WATTSON_HALL_DESC = 'A really big auditorium brings back old memories. You were here on day 1, now you are back again, how nostalgic.'
@@ -153,7 +153,7 @@ class Assets:
         return "That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y to restart or anything else to quit: "
 
     def win_message():
-        return "You have successfully defeated Professor Gyllinsky, keep in mind your job is not over. Now you have gained the gaze of the neighboring professors. You\'ll need to keep one eye open when sleeping... hero"
+        return "You have successfully defeated Professor Gyllinsky, keep in mind your job is not over. Now you have gained the ire of the neighboring professors. You\'ll need to keep one eye open when sleeping."
 
     class ENEMY_ID(Enum):
         SKELETON = 1

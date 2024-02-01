@@ -3,19 +3,19 @@ from enum import Enum
 class Assets:
     # ROOMS INFO
     ANNEX_EAST_NAME = 'Annex East'
-    ANNEX_EAST_DESC = 'Annex East Desc'
+    ANNEX_EAST_DESC = 'This area kind of feels like the east of an annex building.'
 
     ANNEX_SOUTH_NAME = 'Annex South'
-    ANNEX_SOUTH_DESC = 'Annex South Desc'
+    ANNEX_SOUTH_DESC = 'Halls, halls, and more halls'
 
     ANNEX_CENTRAL_NAME = 'Annex Central'
-    ANNEX_CENTRAL_DESC = 'Annex Central Desc'
+    ANNEX_CENTRAL_DESC = 'You can smell the sweat and tears from the workshop'
 
     ANNEX_NORTH_NAME = 'Annex North'
-    ANNEX_NORTH_DESC = 'Annex North Desc'
+    ANNEX_NORTH_DESC = '*The developers have never been in this area*'
 
     IRA_ALLEN_NAME = 'Ira Allen'
-    IRA_ALLEN_DESC = 'Ira Allen Desc'
+    IRA_ALLEN_DESC = 'I went once to this building and it was locked?'
 
     TANSEY_GYM_NAME = 'Tansey Gym'
     TANSEY_GYM_DESC = 'A large gymnasium. Although you were the worst at basketball, no one is going to judge you here.'

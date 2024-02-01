@@ -1,4 +1,3 @@
-from enemy import Enemy
 from enemy_builder import EnemyBuilder
 from assets import Assets
 from map_builder import build_level
@@ -60,7 +59,7 @@ class derivative_dungeon:
             for connected_name in self.current_level.connected_names:
                 print("\t" + connected_name)
             response = input("Make sure you enter it exactly as you see: ")
-        
+
         self.move_user(response)
 
     def move_user(self, response):
@@ -119,26 +118,17 @@ class derivative_dungeon:
         Asks user if they want to stop playing after reaching exit with key.
 
         """
-        if self.has_key and self.current_level.is_exit:  # fix this (check boss first)
-            response = input("Would you like to restart? Enter Y or N: ").lower()
-            while not response == "y" or "n":
-                response = input(
-                    "Enter either Y or N... I thought you were smart: "
-                ).lower()
-            if response == "y":
-                self.restart_game()
-            else:
-                self.game_over = True
-                exit()
+        if self.has_key and self.current_level.is_exit:
+            print(Assets.win_message())
+            self.game_over = True
+            exit()
 
     def death(self):
         """
         Displays death message when user fails.
 
         """
-        print(
-            "That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y to restart or anything else to quit: "
-        )
+        print(Assets.death_message())
         if input().lower() == "y":
             self.restart_game()
         else:

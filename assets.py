@@ -55,13 +55,13 @@ class Assets:
         ("5 – 2", "3"),
         ("18 / 3", "6"),
         ("9 * 10", "90"),
-        ("4 ** 3", "64"),
-        ("4 ** (1/2)", "2"),
+        ("4 ^ 3", "64"),
+        ("4 ^ (1/2)", "2"),
         ("5 + 9", "14"),
         ("-4 + 10", "6"),
         ("8 * -3", "-24"),
         ("16 / 4", "4"),
-        ("7 ** 2", "49"),
+        ("7 ^ 2", "49"),
         ("1 + 1", "2"),
         ("8 - 8", "0"),
         ("10 * 10", "100"),
@@ -85,39 +85,39 @@ class Assets:
         ("Solve for x. x / 5 + (x – 1) / 3 = 1/5", "1"),
         ("If 6x = 42 and xk = 2, qhat is the value of k?", "2/7"),
         ("If 4x + 5 = 13x + 4 - x - 9, then what is x?", "5/4"),
-        ("If a**2 - b**2 = 8 and a*b = 2, find a**4 + b**4.", "72"),
+        ("If a^2 - b^2 = 8 and a*b = 2, find a^4 + b^4.", "72"),
         ("Enter solutions from least to greatest. Formatted: (x1,x2) Least to greatest.", "(4,0.2)"),
-        ("Complete the square by adding a number to both sides: x**2 - 8x + 3 = 0.", "16"),
+        ("Complete the square by adding a number to both sides: x^2 - 8x + 3 = 0.", "16"),
         ("What is the x intercept of the line -3x + y = 3?", "(-1,0)")
     ]
 
     hard_questions = [
-        ("What’s the derivative: h(y) = y**-4 – 9y**-3 + 8y**-2 + 12", "-4y**-5+27y**-4–16y**-3 "),
-        ("Find the derivative: (y**5 – 5y**3 + 2y)/(y**3)", "2y–4y**-3"),
-        ("Find the derivative: z = 3x**3 -9x", "9x**2–9"),
-        ("Find the derivative: g(z) = 4z**2 – 3z**-7 + 9z", "28z**6+21z**-8+9"),
-        ("Find the tangent line to g(x) = 16/x – 4(x)**1/2 at x = 4.", "y=-2x+4"),
-        ("Find the integral: 4x**6 – 2x**3 + 7x – 4.", "4/7x**7–(1/2)x**4+7/2x**2–4x+c"),
+        ("What’s the derivative: h(y) = y^-4 – 9y^-3 + 8y^-2 + 12", "-4y^-5+27y^-4–16y^-3"),
+        ("Find the derivative: (y^5 – 5y^3 + 2y)/(y^3)", "2y–4y^-3"),
+        ("Find the derivative: z = 3x^3 -9x", "9x^2–9"),
+        ("Find the derivative: g(z) = 4z^2 – 3z^-7 + 9z", "28z^6+21z^-8+9"),
+        ("Find the tangent line to g(x) = 16/x – 4(x)^1/2 at x = 4.", "y=-2x+4"),
+        ("Find the integral: 4x^6 – 2x^3 + 7x – 4.", "4/7x^7–(1/2)x^4+7/2x^2–4x+c"),
         ("Find the integral: 2cos(w) – sec(w)tan(w).", "2sin(w)–sec(w)+c"),
         ("Find the integral: 4sin(x/3).", "-12cos(x/3)+c"),
-        ("Find the integral: (x+4)**(8/7) (x-3)**(6/7).", "[(x-3)]/(x+4)]**(1/7)"),
-        ("Find the integral: cos(loge x)", "(x/2)[cos(logex)+sin(loge x)]+c"),
-        ("The position of a particle is given by x(t) = t**3/3 – 4t**2 + 12t. In which time interval(s) does the particle have a positive velocity?", "[0,2) (6, infinity)"),
-        ("Suppose a plane is traveling at a distance of s = f(t) which is a function of time, t, as given by s = f(t) = 8t**2 – 4t + 23. What is the planes acceleration?", "16"),
-        ("Find the third derivative: x**5 + 2x**3 – x + 4", "60x**2+12"),
-        ("Find the derivative: (3x-4)/(2x**2 – 1).", "(-6x**2+16x–3)/(2x**2–1)**2"),
-        ("Find the derivative: y = 2t**4 - 10t**2 + 13t", "8t**3-20t+13"),
-        ("Find the derivative: y = x(3x**2 - 9)", "9x**2-9"),
-        ("Find the derivative: x = (y - 4)(2y + y**2)", "3y**2-4y-8"),
-        ("Find the integral: sin(x) + 10csc**2(x)", "-cos(x)-10cot(x)+c"),
-        ("Determine f(x) given that f'(x) = 12x**2 - 4x and f(-3) = 17.", "4x**3-2x**2+143"),
-        ("Find the integral: w**-2 + 10w**-5 - 8w.", "-w**-1-(5/2)w**-4-8w+c")
+        ("Find the integral: (x+4)^(8/7) (x-3)^(6/7).", "((x-3)/(x+4))^(1/7)"),
+        ("Find the integral: cos(loge x)", "(x/2)(cos(logex)+sin(loge x))+c"),
+        ("The position of a particle is given by x(t) = t^3/3 – 4t^2 + 12t. In which time interval(s) does the particle have a positive velocity?", "[0,2) (6, infinity)"),
+        ("Suppose a plane is traveling at a distance of s = f(t) which is a function of time, t, as given by s = f(t) = 8t^2 – 4t + 23. What is the planes acceleration?", "16"),
+        ("Find the third derivative: x^5 + 2x^3 – x + 4", "60x^2+12"),
+        ("Find the derivative: (3x-4)/(2x^2 – 1).", "(-6x^2+16x–3)/(2x^2–1)^2"),
+        ("Find the derivative: y = 2t^4 - 10t^2 + 13t", "8t^3-20t+13"),
+        ("Find the derivative: y = x(3x^2 - 9)", "9x^2-9"),
+        ("Find the derivative: x = (y - 4)(2y + y^2)", "3y^2-4y-8"),
+        ("Find the integral: sin(x) + 10csc^2(x)", "-cos(x)-10cot(x)+c"),
+        ("Determine f(x) given that f'(x) = 12x^2 - 4x and f(-3) = 17.", "4x^3-2x^2+143"),
+        ("Find the integral: w^-2 + 10w^-5 - 8w.", "-w^-1-(5/2)w^-4-8w+c")
     ]
 
     boss_questions = [
-        ("Suppose that the number of people infected with the flu in a certain city is given by f(t) = 0.5e**t + t**2 in hundreds, with being the time in days since flu season began. How many times higher is the rate of spread of the flu on day 6 than day 2? (Round to nearest whole number)", "28"),
-        ("Determine where the tangent line to f(x) = x**3 - 5x**2 + x is parallel to the line y = 4x + 23. Round to nearest hundredth.", "3.61"),
-        ("What's the local iminimum of f(x) = (2/3)x**3 + 7x**2 - 12x when -10 <= x <= 10. Round to the nearest hundredth.", "0.77")
+        ("Suppose that the number of people infected with the flu in a certain city is given by f(t) = 0.5e^t + t^2 in hundreds, with being the time in days since flu season began. How many times higher is the rate of spread of the flu on day 6 than day 2? (Round to nearest whole number)", "28"),
+        ("Determine where the tangent line to f(x) = x^3 - 5x^2 + x is parallel to the line y = 4x + 23. Round to nearest hundredth.", "3.61"),
+        ("What's the local minimum of f(x) = (2/3)x^3 + 7x^2 - 12x when -10 <= x <= 10. Round to the nearest hundredth.", "0.77")
     ]
     
     #INTRO

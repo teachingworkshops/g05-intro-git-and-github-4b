@@ -24,6 +24,21 @@ class EnemyBuilder:
         math_question = MathQuestion.generate_question(difficulty)
 
         return Enemy(e_type, art, action, math_question)
+    
+    
+    def build_boss(self):
+        """
+        Builds the map boss.
+
+        Returns 
+        Enemy: enemy object
+        """
+        e_type = Assets.BOSS_NAME
+        art = Assets.BOSS_ART
+        action =  Assets.BOSS_ACTION
+        boss_question = random.choice(Assets.boss_questions)
+
+        return Enemy(e_type, art, action, boss_question)    
 
 
 

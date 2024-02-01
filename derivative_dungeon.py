@@ -121,6 +121,7 @@ class derivative_dungeon:
         if self.has_key and self.current_level.is_exit:
             print(Assets.win_message())
             self.game_over = True
+            print(Assets.CREDITS)
             exit()
 
     def death(self):
@@ -134,13 +135,6 @@ class derivative_dungeon:
         else:
             self.game_over = True
             exit()
-
-    def credits():
-        """
-        Displays end credits
-
-        """
-        print(Assets.CREDITS)
 
     def restart_game(self):
         """

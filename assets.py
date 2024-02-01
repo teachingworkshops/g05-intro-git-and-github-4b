@@ -6,28 +6,28 @@ class Assets:
     ANNEX_EAST_DESC = 'This area kind of feels like the east of an annex building.'
 
     ANNEX_SOUTH_NAME = 'Annex South'
-    ANNEX_SOUTH_DESC = 'Halls, halls, and more halls'
+    ANNEX_SOUTH_DESC = 'Halls! Halls! And more halls!'
 
     ANNEX_CENTRAL_NAME = 'Annex Central'
-    ANNEX_CENTRAL_DESC = 'You can smell the sweat and tears from the workshop'
+    ANNEX_CENTRAL_DESC = 'There is no elevator here? And your class is on the top floor? I hope you brought some trail mix for that hike.'
 
     ANNEX_NORTH_NAME = 'Annex North'
-    ANNEX_NORTH_DESC = '*The developers have never been in this area*'
+    ANNEX_NORTH_DESC = 'You stand confused and scared. *The developers have never been in this area*'
 
     IRA_ALLEN_NAME = 'Ira Allen'
-    IRA_ALLEN_DESC = 'I went once to this building and it was locked?'
+    IRA_ALLEN_DESC = 'I went once to this building and it was locked? At least it\'s open now.'
 
     TANSEY_GYM_NAME = 'Tansey Gym'
     TANSEY_GYM_DESC = 'A large gymnasium. Although you were the worst at basketball, no one is going to judge you here.'
 
     BEATTY_NAME = 'Beatty'
-    BEATTY_DESC = 'The scent of food fills the air. At the same time feeling like it\'s crowded despite no one else being here. You want to sit down, but all the seats are taken... they always are'
+    BEATTY_DESC = 'The scent of food fills the air. At the same time feeling like it\'s crowded despite no one else being here. You want to sit down, but all the seats are taken... they always are.'
 
     THE_QUAD_NAME = 'Quad'
     THE_QUAD_DESC = 'A large square of grass. This place connects all other buildings in the vicinity.'
 
     WILLSON_HALL_NAME = 'Willson Hall'
-    WILLSON_HALL_DESC = 'Willson Hall Desc'
+    WILLSON_HALL_DESC = 'Very spacious rooms compared to the other building\'s rooms.'
 
     KINGSMAN_HALL_NAME = 'Kingman Hall'
     KINGSMAN_HALL_DESC = 'A long hallway connecting Willson and Rubenstein. A bunch of big fancy machines fill each room'
@@ -36,13 +36,13 @@ class Assets:
     RUBENSTEIN_HALL_DESC = 'There are a few vending machines here, you could stop and snack for a bit. Wait... $3.75 for a 4 ounce bag of jerky... daylight robbery.'
 
     WILLISTON_HALL_NAME = 'Williston Hall'
-    WILLISTON_HALL_DESC = 'Williston Hall Desc'
+    WILLISTON_HALL_DESC = 'Sometimes, it feels like a sauna, other times... well, actually it always feels like a sauna... for better or for worse.'
 
     WENTWORTH_HALL_NAME = 'Wentworth Hall'
-    WENTWORTH_HALL_DESC = 'Wentworth Hall Desc'
+    WENTWORTH_HALL_DESC = 'Some of these desks do not look very comfortable to sit in. There is no way it can fit a laptop and a notebook at the same time. At least the technology hallway is pretty.'
 
     WATTSON_HALL_NAME = 'Watson Hall'
-    WATTSON_HALL_DESC = 'Watson Hall Desc'
+    WATTSON_HALL_DESC = 'A really big auditorium brings back old memories. You were here on day 1, now you are back again, how nostalgic.'
     
     CEIS_NAME = 'CEIS'
     CEIS_DESC = 'Everything looks new and better compared to the other buildings. The exterior is made of glass, so maybe put down the rock before someone turns you into a saying.'
@@ -127,7 +127,10 @@ class Assets:
     Remember when you told me that you didn't need math to be a good developer?
     If you want to escape this monster-filled dungeon, YOU will need your math skills. Good luck!'
 
-    As confused as you are that a software engineering professor would go through this length of events
+    You flip the note around and read the back, it looks like a set of helpful rules:
+    'If you think your answer has a power (I'm not talking about magic), use double star (**)'
+
+    As confused as you are that a software engineering professor would go through these lengths
     just so you can prove your math skills, you see a door directly infront of you. 
     What will you do?
     """
@@ -150,7 +153,7 @@ class Assets:
     
     #DEATH MESSAGES (make this a list of different death messages and return a random one when called method)
     def death_message():
-        return "dead"
+        return "That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y to restart or anything else to quit: "
 
     class ENEMY_ID(Enum):
         SKELETON = 1

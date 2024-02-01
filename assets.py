@@ -18,22 +18,22 @@ class Assets:
     IRA_ALLEN_DESC = 'Ira Allen Desc'
 
     TANSEY_GYM_NAME = 'Tansey Gym'
-    TANSEY_GYM_DESC = 'Tansey Gym Desc'
+    TANSEY_GYM_DESC = 'A large gymnasium. Although you were the worst at basketball, no one is going to judge you here.'
 
     BEATTY_NAME = 'Beatty'
-    BEATTY_DESC = 'Beatty Desc'
+    BEATTY_DESC = 'The scent of food fills the air. At the same time feeling like it\'s crowded despite no one else being here. You want to sit down, but all the seats are taken... they always are'
 
     THE_QUAD_NAME = 'Quad'
-    THE_QUAD_DESC = 'Quad Desc'
+    THE_QUAD_DESC = 'A large square of grass. This place connects all other buildings in the vicinity.'
 
     WILLSON_HALL_NAME = 'Willson Hall'
     WILLSON_HALL_DESC = 'Willson Hall Desc'
 
-    KINGSMAN_HALL_NAME = 'Kingsman Hall'
-    KINGSMAN_HALL_DESC = 'Kingsman Hall Desc'
+    KINGSMAN_HALL_NAME = 'Kingman Hall'
+    KINGSMAN_HALL_DESC = 'A long hallway connecting Willson and Rubenstein. A bunch of big fancy machines fill each room'
 
     RUBENSTEIN_HALL_NAME = 'Rubenstein Hall'
-    RUBENSTEIN_HALL_DESC = 'Rubenstein Hall Desc'
+    RUBENSTEIN_HALL_DESC = 'There are a few vending machines here, you could stop and snack for a bit. Wait... $3.75 for a 4 ounce bag of jerky... daylight robbery.'
 
     WILLISTON_HALL_NAME = 'Williston Hall'
     WILLISTON_HALL_DESC = 'Williston Hall Desc'
@@ -41,8 +41,11 @@ class Assets:
     WENTWORTH_HALL_NAME = 'Wentworth Hall'
     WENTWORTH_HALL_DESC = 'Wentworth Hall Desc'
 
-    WATTSON_HALL_NAME = 'Wattson Hall'
-    WATTSON_HALL_DESC = 'Wattson Hall Desc'                 
+    WATTSON_HALL_NAME = 'Watson Hall'
+    WATTSON_HALL_DESC = 'Watson Hall Desc'
+    
+    CEIS_NAME = 'CEIS'
+    CEIS_DESC = 'Everything looks new and better compared to the other buildings. The exterior is made of glass, so maybe put down the rock before someone turns you into a saying.'
 
     ## MATH QUESTIONS
 
@@ -64,7 +67,6 @@ class Assets:
         ("89 - 17", "72"),
         ("109 + 11", "120"),
         ("18 * 2", "36")
-        
     ]
 
     medium_questions = [
@@ -81,7 +83,7 @@ class Assets:
     ]
 
     hard_questions = [
-        ("What’s the derivative: h(y) = y**-4 – 9y**-3 + 8y**-2 + 12", "-4y**-5+27y**-4–16y**-3"),
+        ("What’s the derivative: h(y) = y**-4 – 9y**-3 + 8y**-2 + 12", "-4y**-5+27y**-4–16y**-3 "),
         ("Find the derivative: (y**5 – 5y**3 + 2y)/(y**3)", "2y–4y**-3"),
         ("Find the derivative: z = 3x**3 -9x", "9x**2–9"),
         ("Find the derivative: g(z) = 4z**2 – 3z**-7 + 9z", "28z**6+21z**-8+9"),
@@ -89,7 +91,7 @@ class Assets:
         ("Find the integral: 4x**6 – 2x**3 + 7x – 4.", "4/7x**7–(1/2)x**4+7/2x**2–4x+c"),
         ("Find the integral: 2cos(w) – sec(w)tan(w).", "2sin(w)–sec(w)+c"),
         ("Find the integral: 4sin(x/3).", "-12cos(x/3)+c"),
-        ("Find the integral: (x+4)**(8/7) (x-3)**(6/7).", "[(x-3)]/(x+4)]**(1/7)+c"),
+        ("Find the integral: (x+4)**(8/7) (x-3)**(6/7).", "[(x-3)]/(x+4)]**(1/7)"),
         ("Find the integral: cos(loge x)", "(x/2)[cos(logex)+sin(loge x)]+c"),
         ("The position of a particle is given by x(t) = t**3/3 – 4t**2 + 12t. In which time interval(s) does the particle have a positive velocity?", "[0,2) (6, infinity)"),
         ("Suppose a plane is traveling at a distance of s = f(t) which is a function of time, t, as given by s = f(t) = 8t**2 – 4t + 23. What is the planes acceleration?", "16"),
@@ -121,8 +123,10 @@ class Assets:
 
     #CREDITS
     CREDITS = r"""
-    
-    
+    Brian Morillo
+    Brian Sanchez
+    Jonathan Kong-Shi
+    Nehe Lorico
     """
     
     #DEATH MESSAGES (make this a list of different death messages and return a random one when called method)

@@ -20,7 +20,7 @@ class derivative_dungeon:
         self.current_level._is_cleared = True
         self.has_key = False
         self.game_over = False
-        self.difficulty_counter = 0
+        self.difficulty_counter = 1
         self.enemy_builder = EnemyBuilder()
 
     def intro(self):
@@ -82,22 +82,24 @@ class derivative_dungeon:
 
         """
         if self.current_level.is_exit:
-            # change to what boss diff is
-            enemy = self.enemy_builder.build_random_enemy(16)
+            enemy = self.enemy_builder.build_boss()
+            self.difficulty_counter = 13
         else:
             enemy = self.enemy_builder.build_random_enemy(self.difficulty_counter)
 
         question, answer = enemy._math_question
         print(
-            f"{enemy.art}\nYou have approach a {enemy.enemy_type}. The {enemy.enemy_type} is {enemy.action}!"
+            f"{enemy.art}\nYou have approached a {enemy.enemy_type}. The {enemy.enemy_type} is {enemy.action}! "
             + f"The {enemy.enemy_type} has a question for you...\nWhat is the answer for this problem? \t{question}"
             + "\nIf you think your answer has a power (I'm not talking about magic), use double star (**): "
         )
 
         if not input() == answer:
             self.death()
+        self.difficulty_counter += 1
         print("Nice job. Transporting now...")
         self.current_level._is_cleared = True
+
         if not self.has_key and self.current_level.is_exit:
             print("Nice try buddy, you forgot the key...")
 

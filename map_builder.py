@@ -3,6 +3,9 @@ from room import Room
 from assets import Assets
 
 def build_level():
+   """
+   Builds a graph out of WIT locations and returns initial node
+   """
    # Creates all rooms for the level
    annex_east = Room(Assets.ANNEX_EAST_NAME, Assets.ANNEX_EAST_DESC)
    annex_south = Room(Assets.ANNEX_SOUTH_NAME, Assets.ANNEX_SOUTH_DESC)

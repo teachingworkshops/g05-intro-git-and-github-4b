@@ -2,16 +2,20 @@
 
 ## _Math Text-based Dungeon game_
 
-## Installation
-
-```sh
-pip install -r requirements.txt
-```
+Derivative Dungeon is a text-based game where players navigate through rooms defeating enemies using their mathematical prowess!
 
 ## Run Game
 
 ```sh
 python derivative_dungeon.py
+```
+
+## Dev Installation
+
+Necessary for running tests and building the executable
+
+```sh
+pip install -r requirements.txt
 ```
 
 ## Running tests
@@ -20,6 +24,21 @@ python derivative_dungeon.py
 pytest
 ```
 
-## License
+## Building EXE
 
-MIT
+```sh
+pyinstaller --onefile derivative_dungeon.py
+```
+
+## Credits
+
+https://github.com/kongshijatwit
+https://github.com/Nehummus
+https://github.com/briansanchez1
+https://github.com/morillobatwit
+
+## Attributions
+
+The following resources were used for the project:
+https://fonts.google.com/noto/specimen/Noto+Color+Emoji
+https://manytools.org/hacker-tools/convert-images-to-ascii-art/

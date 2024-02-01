@@ -86,7 +86,7 @@ class Assets:
         ("If 6x = 42 and xk = 2, qhat is the value of k?", "2/7"),
         ("If 4x + 5 = 13x + 4 - x - 9, then what is x?", "5/4"),
         ("If a^2 - b^2 = 8 and a*b = 2, find a^4 + b^4.", "72"),
-        ("Enter solutions from least to greatest. Formatted: (x1,x2) Least to greatest.", "(4,0.2)"),
+        ("What is the point of intersection of the lines x - y = 3 and -5x - 2y = -22?", "(4,1)"),
         ("Complete the square by adding a number to both sides: x^2 - 8x + 3 = 0.", "16"),
         ("What is the x intercept of the line -3x + y = 3?", "(-1,0)")
     ]

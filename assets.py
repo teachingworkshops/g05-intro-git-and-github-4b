@@ -128,9 +128,6 @@ class Assets:
     Remember when you told me that you didn't need math to be a good developer?
     If you want to escape this monster-filled dungeon, YOU will need your math skills. Good luck!'
 
-    You flip the note around and read the back, it looks like a set of helpful rules:
-    'If you think your answer has a power (I'm not talking about magic), use double star (**)'
-
     As confused as you are that a software engineering professor would go through these lengths
     just so you can prove your math skills, you see a door directly infront of you. 
     What will you do?
@@ -152,9 +149,11 @@ class Assets:
     Nehe Lorico
     """
     
-    #DEATH MESSAGES (make this a list of different death messages and return a random one when called method)
     def death_message():
         return "That was wrong. You are NOT as smart as you thought you were. And for that, you will pay the price. You have been smited. Would you like to try again? Enter Y to restart or anything else to quit: "
+
+    def win_message():
+        return "You have successfully defeated Professor Gyllinsky, keep in mind your job is not over. Now you have gained the gaze of the neighboring professors. You\'ll need to keep one eye open when sleeping... hero"
 
     class ENEMY_ID(Enum):
         SKELETON = 1

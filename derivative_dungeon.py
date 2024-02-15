@@ -133,13 +133,17 @@ class derivative_dungeon:
     def check_game_over(self):
         """
         Asks user if they want to stop playing after reaching exit with key.
-
+        Waits for user response to exit.
         """
         if self.has_key and self.current_level.is_exit:
             print(Assets.win_message())
             self.game_over = True
             print(Assets.CREDITS)
-            exit()
+            print("Press enter to exit or Y to play again...")
+            if input().lower() == "y":
+                self.restart_game()
+            else:
+                exit()
 
     def death(self):
         """

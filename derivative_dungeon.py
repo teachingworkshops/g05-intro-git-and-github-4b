@@ -19,6 +19,7 @@ class derivative_dungeon:
         self.current_level._is_cleared = True
         self.has_key = False
         self.game_over = False
+        self.bad_input = False
         self.difficulty_counter = 1
         self.enemy_builder = EnemyBuilder()
 
@@ -53,12 +54,28 @@ class derivative_dungeon:
         Args:
             response (String): room user wants to travel to.
         """
-        while response not in self.current_level.connected_rooms:
+
+        for location in self.current_level.connected_names:
+            if response.lower() != location.lower():
+                self.bad_input = True
+            else:  
+                self.bad_input = False
+                response = location
+                break
+
+        while self.bad_input:
             print("\nNot quite. Please enter a connected room name.")
             print(f"Remember, you can only travel to...")
             for connected_name in self.current_level.connected_names:
                 print("\t" + connected_name)
             response = input("Make sure you enter it exactly as you see: ")
+
+            for location in self.current_level.connected_names:
+                if response.lower() == location.lower():
+                    response = location
+                    self.bad_input = False
+                    break
+
 
         self.move_user(response)
 
